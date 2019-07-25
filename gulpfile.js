@@ -72,7 +72,7 @@ gulp.task("server",async()=>{
 	connect.server({
 		port: "8090", //更改端口号
 		livereload : true
-	})
+	});
 });
 
 gulp.task("default",gulp.series("html","images","js","css","watch","server"));//想让两个任务都一起执行，就调用默认任务default。task依然只接收两个参数，第一个参数是任务名，第二个参数包含了任务依赖和回调函数。

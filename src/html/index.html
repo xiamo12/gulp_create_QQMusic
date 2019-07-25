@@ -1,13 +1,47 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>QQ Music</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- <meta http-equiv="X-UA-Compatibal" content="no-cache"> -->
+	<title>音乐播放器</title>
+	<link rel="stylesheet" type="text/css" href="../css/index.css">
 </head>
 <body>
-	<ol>
-		<li>你好</li>
-		<li>猪猪</li>
-		<li>夏天开始了昂</li>
-	</ol>
+	<div class="wrapper">
+		<div class="song-img">
+			<div class="img-wrapper">
+				<img src="">
+			</div>
+		</div>
+		<div class="song-info">
+			<!-- <div class="song-name">演员</div>
+			<div class="singer-name">邓哥</div>
+			<div class="album-name">意外</div> -->
+		</div><!-- song-info -->
+		<div class="pro">
+			<div class="cur-time">00:00</div>
+			<div class="pro-wrapper">
+				<div class="pro-bottom"></div>
+				<div class="pro-top">
+					<div class="slider-pointer"></div>
+				</div>
+			</div>
+			<div class="all-time"></div>
+		</div>
+		<div class="control">
+			<div class="btn-wrapper like-btn"></div>
+			<div class="btn-wrapper pre-btn"></div>
+			<div class="btn-wrapper play-btn"></div>
+			<div class="btn-wrapper next-btn"></div>
+			<div class="btn-wrapper list-btn"></div>
+		</div>
+	</div><!--wrapper-->
+	<script src="../js/zepto.min.js"></script>
+	<script type="text/javascript" src="../js/controlManager.js"></script>
+	<script type="text/javascript" src="../js/audioControl.js"></script>
+	<script type="text/javascript" src="../js/process.js"></script>
+	<script type="text/javascript" src="../js/render.js"></script>
+	<script type="text/javascript" src="../js/index.js"></script>
 </body>
 </html>

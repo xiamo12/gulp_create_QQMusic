@@ -13,6 +13,7 @@
   "author": "xiamo",
   "license": "ISC",
   "dependencies": {
+    "gulp-open": "^3.0.1",
     "jquery": "^3.4.1"
   },
   "devDependencies": {
