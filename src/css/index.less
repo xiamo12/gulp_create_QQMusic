@@ -122,39 +122,83 @@ body{/*高斯模糊图片的设置*/
 			}
 			.like-btn{
 				background-image: url("../images/shoucang-7.png");
+				&:hover{background-color: rgba(0,100,200,0.1);}
 				&.liking{
 					background-image: url("../images/shoucang-8.png");
 				}
 			}
 			.pre-btn{
-				background-image: url("../images/yk_fanhui.png")
+				background-image: url("../images/yk_fanhui.png");
+				&:hover{background-color: rgba(0,100,200,0.1);}
 			}
 			.play-btn{
 				background-image: url("../images/yk_shipin.png");
+				&:hover{background-color: rgba(0,100,200,0.1);}
 				&.pause{
 					background-image: url("../images/zanting.png");
 				}
 			}
 			.next-btn{
-				background-image: url("../images/yk_qianjin.png")
+				background-image: url("../images/yk_qianjin.png");
+				&:hover{background-color: rgba(0,100,200,0.1);}
 			}
 			.list-btn{
 				background-image: url("../images/zhankai.png");
+				&:hover{background-color: rgba(0,100,200,0.1);}
 				}
 			}
 		.info-list{
-			display: none;
-			padding: 5px;
+			position: fixed;
+			bottom: 0;
+			width: 100%;
+			height: 80%;
+			/*padding-left: 3px;*/
+			/*display: none;*/
 			font-size: 16px;
-			color: red;
-			border: 1px solid black;
-			background-color: rgba(0,100,200,0.35);
+			background-color: rgba(0,100,200,0.7);
+			border-radius: 2px;
+			background-image: url(/source/gauss.jpg);
+			background-size: cover;
+			opacity: 0.8;
+			p{
+				box-sizing: border-box;
+				padding-left: 15px;
+				padding-top: 15px;
+				font-family: Cursive;
+				width: 100%;
+				height: 40px;
+				color: white;
+				opacity: 1;
+				cursor: pointer;
+				&:hover{background-color: rgba(0,100,200,0.1);}
+			}
+			.hide-button{
+				position: absolute;
+				bottom: 0;
+				width: 100%;
+				height: 60px;
+				/*border: 1px solid red;*/
+				text-align: center;
+				line-height: 60px;
+				cursor: pointer;
+				font-family: Cursive;
+				font-size: 18px;
+				font-weight: bold;
+				color: white;
+				letter-spacing: 5px;
+				&:hover{background-color: rgba(0,100,200,0.1);}
+			}
+			&.hide{
+				display: none;
+				animation: slideDown 0.6s;
+			}
 			&.show{
 				display: block;
+				animation: slideUp 0.6s;
+				}
 			}
 		}
 	}
-}
 
 @media screen and (min-width: 596px){
 	.wrapper{
@@ -254,8 +298,6 @@ body{/*高斯模糊图片的设置*/
 		}
 	}
 	.control{
-		/*position:fixed;*/
-		/*bottom: 0;*/
 		width: 50%;
 		height: 60px;
 		position: fixed;
@@ -271,40 +313,93 @@ body{/*高斯模糊图片的设置*/
 		}
 		.like-btn{
 			background-image: url("../images/shoucang-7.png");
+			&:hover{background-color: rgba(0,100,200,0.1);}
 			&.liking{
 				background-image: url("../images/shoucang-8.png");
 			}
 		}
 		.pre-btn{
-			background-image: url("../images/yk_fanhui.png")
+			background-image: url("../images/yk_fanhui.png");
+			&:hover{background-color: rgba(0,100,200,0.1);}
 		}
 		.play-btn{
 			background-image: url("../images/yk_shipin.png");
+			&:hover{background-color: rgba(0,100,200,0.1);}
 			&.pause{
 				background-image: url("../images/zanting.png");
 			}
 		}
 		.next-btn{
-			background-image: url("../images/yk_qianjin.png")
+			background-image: url("../images/yk_qianjin.png");
+			&:hover{background-color: rgba(0,100,200,0.1);}
 		}
 		.list-btn{
 			background-image: url("../images/zhankai.png");
+			&:hover{background-color: rgba(0,100,200,0.1);}
 			}
 		}
-	.info-list{
-		display: none;
-		padding: 5px;
-		font-size: 16px;
-		color: red;
-		border: 1px solid black;
-		background-color: rgba(0,100,200,0.35);
-		&.show{
-			display: block;
-		}
-	}
-}
-}
+		.info-list{
+			position: fixed;
+			bottom: 0;
+			width: 50%;
+			height: 80%;
+			/*padding-left: 3px;*/
+			display: none;
+			font-size: 16px;
+			background-color: rgba(0,100,200,0.7);
+			border-radius: 2px;
+			background-image: url(/source/gauss.jpg);
+			background-size: cover;
+			opacity: 0.8;
+			p{
+				box-sizing: border-box;
+				padding-left: 10px;
+				padding-top: 10px;
+				font-family: Cursive;
+				width: 100%;
+				height: 40px;
+				color: white;
+				opacity: 1;
+				cursor: pointer;
+				&:hover{background-color: rgba(0,100,200,0.2);}
+			}
+			.hide-button{
+				position: absolute;
+				bottom: 0;
+				width: 100%;
+				height: 60px;
+				text-align: center;
+				line-height: 60px;
+				font-size: 18px;
+				/*border: 1px solid red;*/
+				cursor: pointer;
+				font-family: Cursive;
+				letter-spacing: 5px;
+				font-weight: bold;
+				color: white;
+				&:hover{background-color: rgba(0,100,200,0.1);}
+				}
+				&.hide{
+					display: none;
+					animation: slideDown 0.6s;
+					}
+					&.show{
+						display: block;
+						animation: slideUp 0.6s;
+						}
+					}
+				}
+			}
 
+
+@keyframes slideUp{
+	from {bottom: -100%;}
+	to{bottom:0;}
+}
+@keyframes slideDown{
+	from {bottom: 0;}
+	to{bottom:-70%;}
+}
 
 
 

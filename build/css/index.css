@@ -128,14 +128,23 @@ body {
   .wrapper .control .like-btn {
     background-image: url("../images/shoucang-7.png");
   }
+  .wrapper .control .like-btn:hover {
+    background-color: rgba(0, 100, 200, 0.1);
+  }
   .wrapper .control .like-btn.liking {
     background-image: url("../images/shoucang-8.png");
   }
   .wrapper .control .pre-btn {
     background-image: url("../images/yk_fanhui.png");
   }
+  .wrapper .control .pre-btn:hover {
+    background-color: rgba(0, 100, 200, 0.1);
+  }
   .wrapper .control .play-btn {
     background-image: url("../images/yk_shipin.png");
+  }
+  .wrapper .control .play-btn:hover {
+    background-color: rgba(0, 100, 200, 0.1);
   }
   .wrapper .control .play-btn.pause {
     background-image: url("../images/zanting.png");
@@ -143,19 +152,68 @@ body {
   .wrapper .control .next-btn {
     background-image: url("../images/yk_qianjin.png");
   }
+  .wrapper .control .next-btn:hover {
+    background-color: rgba(0, 100, 200, 0.1);
+  }
   .wrapper .control .list-btn {
     background-image: url("../images/zhankai.png");
   }
+  .wrapper .control .list-btn:hover {
+    background-color: rgba(0, 100, 200, 0.1);
+  }
   .wrapper .info-list {
-    display: none;
-    padding: 5px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 80%;
+    /*padding-left: 3px;*/
+    /*display: none;*/
     font-size: 16px;
-    color: red;
-    border: 1px solid black;
-    background-color: rgba(0, 100, 200, 0.35);
+    background-color: rgba(0, 100, 200, 0.7);
+    border-radius: 2px;
+    background-image: url(/source/gauss.jpg);
+    background-size: cover;
+    opacity: 0.8;
+  }
+  .wrapper .info-list p {
+    box-sizing: border-box;
+    padding-left: 15px;
+    padding-top: 15px;
+    font-family: Cursive;
+    width: 100%;
+    height: 40px;
+    color: white;
+    opacity: 1;
+    cursor: pointer;
+  }
+  .wrapper .info-list p:hover {
+    background-color: rgba(0, 100, 200, 0.1);
+  }
+  .wrapper .info-list .hide-button {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    /*border: 1px solid red;*/
+    text-align: center;
+    line-height: 60px;
+    cursor: pointer;
+    font-family: Cursive;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    letter-spacing: 5px;
+  }
+  .wrapper .info-list .hide-button:hover {
+    background-color: rgba(0, 100, 200, 0.1);
+  }
+  .wrapper .info-list.hide {
+    display: none;
+    animation: slideDown 0.6s;
   }
   .wrapper .info-list.show {
     display: block;
+    animation: slideUp 0.6s;
   }
 }
 @media screen and (min-width: 596px) {
@@ -261,8 +319,6 @@ body {
     background-color: #fff;
   }
   .wrapper .control {
-    /*position:fixed;*/
-    /*bottom: 0;*/
     width: 50%;
     height: 60px;
     position: fixed;
@@ -280,14 +336,23 @@ body {
   .wrapper .control .like-btn {
     background-image: url("../images/shoucang-7.png");
   }
+  .wrapper .control .like-btn:hover {
+    background-color: rgba(0, 100, 200, 0.1);
+  }
   .wrapper .control .like-btn.liking {
     background-image: url("../images/shoucang-8.png");
   }
   .wrapper .control .pre-btn {
     background-image: url("../images/yk_fanhui.png");
   }
+  .wrapper .control .pre-btn:hover {
+    background-color: rgba(0, 100, 200, 0.1);
+  }
   .wrapper .control .play-btn {
     background-image: url("../images/yk_shipin.png");
+  }
+  .wrapper .control .play-btn:hover {
+    background-color: rgba(0, 100, 200, 0.1);
   }
   .wrapper .control .play-btn.pause {
     background-image: url("../images/zanting.png");
@@ -295,18 +360,83 @@ body {
   .wrapper .control .next-btn {
     background-image: url("../images/yk_qianjin.png");
   }
+  .wrapper .control .next-btn:hover {
+    background-color: rgba(0, 100, 200, 0.1);
+  }
   .wrapper .control .list-btn {
     background-image: url("../images/zhankai.png");
   }
+  .wrapper .control .list-btn:hover {
+    background-color: rgba(0, 100, 200, 0.1);
+  }
   .wrapper .info-list {
+    position: fixed;
+    bottom: 0;
+    width: 50%;
+    height: 80%;
+    /*padding-left: 3px;*/
     display: none;
-    padding: 5px;
     font-size: 16px;
-    color: red;
-    border: 1px solid black;
-    background-color: rgba(0, 100, 200, 0.35);
+    background-color: rgba(0, 100, 200, 0.7);
+    border-radius: 2px;
+    background-image: url(/source/gauss.jpg);
+    background-size: cover;
+    opacity: 0.8;
+  }
+  .wrapper .info-list p {
+    box-sizing: border-box;
+    padding-left: 10px;
+    padding-top: 10px;
+    font-family: Cursive;
+    width: 100%;
+    height: 40px;
+    color: white;
+    opacity: 1;
+    cursor: pointer;
+  }
+  .wrapper .info-list p:hover {
+    background-color: rgba(0, 100, 200, 0.2);
+  }
+  .wrapper .info-list .hide-button {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+    font-size: 18px;
+    /*border: 1px solid red;*/
+    cursor: pointer;
+    font-family: Cursive;
+    letter-spacing: 5px;
+    font-weight: bold;
+    color: white;
+  }
+  .wrapper .info-list .hide-button:hover {
+    background-color: rgba(0, 100, 200, 0.1);
+  }
+  .wrapper .info-list.hide {
+    display: none;
+    animation: slideDown 0.6s;
   }
   .wrapper .info-list.show {
     display: block;
+    animation: slideUp 0.6s;
+  }
+}
+@keyframes slideUp {
+  from {
+    bottom: -100%;
+  }
+  to {
+    bottom: 0;
+  }
+}
+@keyframes slideDown {
+  from {
+    bottom: 0;
+  }
+  to {
+    bottom: -70%;
   }
 }

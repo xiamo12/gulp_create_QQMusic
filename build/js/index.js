@@ -47,9 +47,11 @@ function bindEvent(){
 	});
 
 	$scope.on("click",".list-btn",function(){
-		$scope.find(".info-list").toggleClass("show");
-	})
-
+		$scope.find(".info-list").addClass("show");//点击菜单按钮显示菜单
+	});
+	$scope.on("click",".hide-button",function(){
+		$scope.find(".info-list").removeClass("show").addClass("hide");
+	}); //点击按钮隐藏菜单
 }
 
 function bindTouch(){
