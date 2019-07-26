@@ -7,10 +7,10 @@
 (function($, root){
 	var $scope = $(document.body);
 	function renderInfo(info){
-		var html = '<div class="song-name">'+ info.song +'</div>'
-			'<div class="singer-name">'+ info.singer + '</div>'
+		var html = '<div class="song-name">'+ info.song +'</div>'+
+			'<div class="singer-name">'+ info.singer + '</div>'+
 			'<div class="album-name">' + info.album + '</div>';
-		$scope.find(".song-info").html(html);
+		$scope.find(".song-info").html(html); //将此段代码渲染到html文档上
 	}
 
 	function renderImg(src){
@@ -31,6 +31,7 @@
 		}
 
 	}
+
 
 	root.render = function(data){
 		renderInfo(data);

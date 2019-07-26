@@ -14,10 +14,14 @@
   "license": "ISC",
   "dependencies": {
     "gulp-open": "^3.0.1",
-    "jquery": "^3.4.1"
+    "jquery": "^3.4.1",
+    "lodash": "^4.17.15"
   },
   "devDependencies": {
     "autoprefixer": "^9.6.1",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "babelify": "^10.0.0",
     "call-me-maybe": "^1.0.1",
     "glob-to-regexp": "^0.4.1",
     "gulp": "^4.0.2",
@@ -32,8 +36,12 @@
     "gulp-minify-css": "^1.2.4",
     "gulp-newer": "^1.4.0",
     "gulp-postcss": "^8.0.0",
+    "gulp-reactify": "^3.0.1",
     "gulp-strip-debug": "^3.0.0",
     "gulp-uglify": "^3.0.2",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-tools": "^0.13.3",
     "uglify": "^0.1.5"
   }
 }

@@ -2,16 +2,16 @@
 	{
 		"image": "/source/王菲-暗涌.jpg",
 		"audio": "/source/王菲-暗涌.mp3",
-		"song": "暗涌",
-		"album": "暗涌",
-		"singer": "王菲",
+		"song": "暗 涌",
+		"album": "暗 涌",
+		"singer": "王 菲",
 		"duration": 261,
-		"isLike": true
+		"isLike": false
 	},
 	{
 		"image": "/source/周杰伦.jpg",
-		"audio": "/source/周杰伦-晴天.mp3",
-		"song": "晴天",
+		"audio": "/source/周杰伦-晴 天.mp3",
+		"song": "晴 天",
 		"album": "七里香",
 		"singer": "周杰伦",
 		"duration": 270,

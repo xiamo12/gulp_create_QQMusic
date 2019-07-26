@@ -15,6 +15,12 @@ var connect = require("gulp-connect");
 
 var devMode = process.env.NODE_ENV == "development";
 
+
+// var babelify = require("babelify");
+// var gulpReactify = require('gulp-reactify');
+// var reactTools = require('react-tools');
+
+
 //gulp.src() 读文件
 //gulp.dest() 写文件
 //gulp.task() 创建任务
@@ -24,6 +30,14 @@ var folder = { //文件夹
 	src: "./src/", //指定src是当前文件夹下的src文件夹
 	build: "./build/"//指定build是当前文件夹下的build文件夹
 }	
+
+
+// gulp.task("compile",async()=>{
+// 	await gulp.src(folder.src + "js/*")
+// 	.pipe(gulpReactify({
+// 		reactTools:reactTools
+// 	})).pipe(gulp.dest(folder.build + "js"))
+// })
 
 
 //gulp.task注册一个任务，接收三个参数，1⃣️命名一个任务名字，2⃣️定义️要做的任务操作
@@ -71,6 +85,7 @@ gulp.task("watch",async()=>{ //创建一个监听任务，监听代码编码。�
 gulp.task("server",async()=>{
 	connect.server({
 		port: "8090", //更改端口号
+		host:"192.168.50.90",
 		livereload : true
 	});
 });

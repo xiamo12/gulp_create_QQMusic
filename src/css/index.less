@@ -10,20 +10,171 @@ body{/*高斯模糊图片的设置*/
 	background-position: 100%;
 }
 
-.wrapper{
-	width: 100vw;
+@media screen and (max-width: 596px){
+	.wrapper{
+		overflow: hidden;
+		width: 100vw;
+		height: 100vh;
+		background-color: rgba(0,0,0,0.2);
+		padding-top: 80px;
+		background-attachment: fixed;
+		box-sizing: border-box;
+		.song-img{
+			border: solid black 1px;
+			width: 50%;
+			height: 0;
+			padding-top: 50%;
+			position: relative;
+			margin: 0 auto;
+			.img-wrapper{
+				position: absolute;
+				left: 0;
+				bottom: 0;
+				right: 0;
+				top: 0;
+				img{
+					width: 100%;
+					height: 100%;
+				}
+			}
+		}
+		.song-info{
+			width: 100%;
+			text-align: center;
+			height: 126px;
+			margin-top: 40px;
+			.song-name{
+				font-size: 24px;
+				line-height: 36px;
+				color: rgba(255,255,255,0.6);
+				margin-bottom: 8px;
+			}
+			.singer-name,.album-name{
+				font-size: 12px;
+				line-height: 16px;
+				margin-top: 6px;
+				color: rgba(255,255,255,0.6);
+			}
+		}
+		.pro{
+			display: flex;
+			.cur-time,.all-time{
+				color: #fff;
+				width: 60px;
+				height: 40px;
+				line-height: 40px;
+				text-align: center;
+			}
+			.pro-wrapper{
+				flex: 1;
+				position: relative;
+				overflow: hidden;
+				.pro-top,.pro-bottom{
+					height: 1px;
+					width: 100%;
+					position: absolute;
+					top: 20px;
+				}
+				.pro-bottom{
+					background-color: rgba(255,255,255,.5);
+				}
+				.pro-top{
+					background-color: #fff;
+					transform: translateX(-100%);/* 设置pro-top移动到最左边，它的最右端正好出现在视野里。*/
+					position: relative;
+					.slider-pointer{
+						width: 21px;
+						height: 21px;
+						position: absolute;
+						/*border: 1px solid black;*/
+						top: -10px;
+						right: -15px;
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						&::after{  /*进度控制圆点*/
+							content: "";
+							display: block;
+							height: 8px;
+							width: 8px;
+							border-radius: 50%;
+							background-color: #fff;
+						}
+					}
+				}
+			}
+		}
+		.control{
+			position:fixed;
+			bottom: 0;
+			width: 100%;
+			height: 60px;
+			position: fixed;
+			bottom: 0;
+			background-color: rgba(0,0,0,0.4);
+			display: flex;
+			.btn-wrapper{
+				flex:1;
+				background-position: 50%;
+				background-size: 35px 35px;
+				background-repeat: no-repeat;
+				cursor: pointer;
+			}
+			.like-btn{
+				background-image: url("../images/shoucang-7.png");
+				&.liking{
+					background-image: url("../images/shoucang-8.png");
+				}
+			}
+			.pre-btn{
+				background-image: url("../images/yk_fanhui.png")
+			}
+			.play-btn{
+				background-image: url("../images/yk_shipin.png");
+				&.pause{
+					background-image: url("../images/zanting.png");
+				}
+			}
+			.next-btn{
+				background-image: url("../images/yk_qianjin.png")
+			}
+			.list-btn{
+				background-image: url("../images/zhankai.png");
+				}
+			}
+		.info-list{
+			display: none;
+			padding: 5px;
+			font-size: 16px;
+			color: red;
+			border: 1px solid black;
+			background-color: rgba(0,100,200,0.35);
+			&.show{
+				display: block;
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 596px){
+	.wrapper{
+		overflow: scroll;
+	width: 50vw;
 	height: 100vh;
+	margin: 0 25vw;
 	background-color: rgba(0,0,0,0.2);
-	padding-top: 60px;
+	padding-top: 80px;
 	box-sizing: border-box;
 	.song-img{
-		width: 50%;
-		height: 0;
-		padding-top: 50%;
 		position: relative;
 		margin: 0 auto;
-		border: 1px solid black;
+		width: 25vw;
+		height: 25vw;
+		max-width: 300px;
+		max-height: 300px;
+
 		.img-wrapper{
+			margin: 0 auto;
 			position: absolute;
 			left: 0;
 			bottom: 0;
@@ -36,24 +187,25 @@ body{/*高斯模糊图片的设置*/
 		}
 	}
 	.song-info{
+		padding-top: 10px; 
+		padding-bottom: 10px;
 		width: 100%;
 		text-align: center;
-		height: 126px;
-		margin-top: 40px;
+		height: 80px;
 		.song-name{
 			font-size: 24px;
 			line-height: 36px;
 			color: rgba(255,255,255,0.6);
-			margin-bottom: 8px;
 		}
 		.singer-name,.album-name{
+			padding-top: 10px;
 			font-size: 12px;
 			line-height: 16px;
-			margin-top: 6px;
 			color: rgba(255,255,255,0.6);
 		}
 	}
 	.pro{
+		padding-top: 20px;
 		display: flex;
 		.cur-time,.all-time{
 			color: #fff;
@@ -102,23 +254,25 @@ body{/*高斯模糊图片的设置*/
 		}
 	}
 	.control{
-		width: 100%;
+		/*position:fixed;*/
+		/*bottom: 0;*/
+		width: 50%;
 		height: 60px;
-		position: absolute;
+		position: fixed;
 		bottom: 0;
 		background-color: rgba(0,0,0,0.4);
 		display: flex;
 		.btn-wrapper{
 			flex:1;
 			background-position: 50%;
-			background-size: 30px 30px;
+			background-size: 35px 35px;
 			background-repeat: no-repeat;
 			cursor: pointer;
 		}
 		.like-btn{
-			background-image: url("../images/shoucang-copy.png");
+			background-image: url("../images/shoucang-7.png");
 			&.liking{
-				background-image: url("../images/collect-active.png");
+				background-image: url("../images/shoucang-8.png");
 			}
 		}
 		.pre-btn{
@@ -134,7 +288,23 @@ body{/*高斯模糊图片的设置*/
 			background-image: url("../images/yk_qianjin.png")
 		}
 		.list-btn{
-			background-image: url("../images/zhankai.png")
+			background-image: url("../images/zhankai.png");
+			}
+		}
+	.info-list{
+		display: none;
+		padding: 5px;
+		font-size: 16px;
+		color: red;
+		border: 1px solid black;
+		background-color: rgba(0,100,200,0.35);
+		&.show{
+			display: block;
 		}
 	}
 }
+}
+
+
+
+

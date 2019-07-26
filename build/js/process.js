@@ -65,6 +65,10 @@
 		cancelAnimationFrame(frameId); //取消动画
 	}
 
+	function showlist(){
+		$scope.find(".info-list").toggleClass("show");
+	}
+
 	//向外暴露模块
 	root.process = {
 		renderAllTime: renderAllTime,

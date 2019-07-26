@@ -8,7 +8,6 @@ var audio = new root.audioControl();
 
 function bindEvent(){ 
 	$scope.on("play:change", function(event,index){  //自定义一个play:change事件
-		console.log(songList[index].audio);
 		audio.getAudio(songList[index].audio);
 		if (audio.status == "play") {
 			audio.play();
@@ -45,6 +44,10 @@ function bindEvent(){
 
 	$scope.on("click", ".like-btn", function(){
 		$(this).toggleClass("liking");
+	});
+
+	$scope.on("click",".list-btn",function(){
+		$scope.find(".info-list").toggleClass("show");
 	})
 
 }
@@ -55,7 +58,6 @@ function bindTouch(){
 	var offset = $scope.find(".pro-wrapper").offset();
 	var left = offset.left;
 	var width = offset.width;
-
 	$slider.on("touchstart", function(){
 		root.process.stop();
 	}).on("touchmove", function(e){
@@ -71,10 +73,9 @@ function bindTouch(){
 		if (per < 0 || per > 1) {
 			per = 0;
 		}
-		console.log(controlManager);
 		var curDuration = songList[controlManager.index].duration;
 		var curTime = per * curDuration;
-		// audio.playTo(curTime);
+		audio.playTo(curTime);
 		root.process.start(per);
 		$scope.find(".play-btn").addClass("pause");
 	})
@@ -86,6 +87,7 @@ function getData(url){//ajax向外请求数据。成功获取数据之后进行s
 		url: url,
 		success:function(data){
 			root.render(data[0]); //渲染歌曲图片、info、process、like信息
+			root.list(data);
 			songList = data;  //将data赋值给全局变量songList，这样ajax函数外面的数据也可以用到这个变量
 			bindEvent(); //绑定事件
 			controlManager = new root.controlManager(data.length); //控制前进和后退按钮
